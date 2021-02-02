@@ -18,6 +18,10 @@ sidebar_label: CIM Model
 
 Extract this content and print it here:
 ```
-<description>
+> Description ...
 
-## Prodcut v1.1
+## Product v1.1
+
+> Image
+
+> Description
