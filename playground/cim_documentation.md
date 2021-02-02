@@ -20,6 +20,7 @@ Extract this content and print it here:
 ```
 > Description ...
 
+See GitHub ![GitHub Icon](/images/GitHub-Mark-32px.png)
 ## Product v1.1
 
 > Image
