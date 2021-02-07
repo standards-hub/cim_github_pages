@@ -1,0 +1,48 @@
+{
+    "id": "http://www. /cim_library_schema.json",
+    "publisher": {
+        "name": "Cloud Information Model",
+        "abbreviation": "CIM",
+        "schemaVersion": "1.0",
+        "publisherURL": "https://cloudinformationmodel.org/",
+        "about": "About CIM",
+        "email": "info@cloudinformationmodel.org"
+    },
+    "domains": [
+        {        
+            "domainID": 0,
+            "name": "Produce",
+            "description": "Bla, bla",
+            "subjectAreas": [
+                {
+                    "subjectAreaID": 0,
+                    "name": "Product",
+                    "description": "Bla, bla",
+                    "versions": [
+                        {
+                            "versionID": 0,
+                            "version": "v1.0",
+                            "versionDate": {
+                                "year": "2012",
+                                "month": "10",
+                                "day": "02"
+                            },
+                            "updateDate": {
+                                "year": "2012",
+                                "month": "10"
+                            },
+                            "diagramURL": "https://",
+                            "aboutDescriptionURL": "https://",
+                            "versionTags": [
+                                "#tag1",
+                                "#tag2",
+                                "#tag3",
+                                "#tag4"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
