@@ -31,9 +31,9 @@
                             "year": "2020",
                             "month": "10"
                         },
-                        "diagramURL": "https://",
-                        "descriptionURL": "https://",
-                        "gitHubURL": "https://",
+                        "diagramURL": "https://raw.githubusercontent.com/cloudinformationmodel/cloudinformationmodel/v0.1.2/src/subjectAreas/Product/diagram.png",
+                        "descriptionURL": "https://raw.githubusercontent.com/cloudinformationmodel/cloudinformationmodel/v0.1.2/src/subjectAreas/Product/about.jsonld",
+                        "gitHubURL": "https://github.com/cloudinformationmodel/cloudinformationmodel/tree/master/src/subjectAreas/Product",
                         "tags": [
                             "#tag1",
                             "#tag2"
@@ -85,9 +85,9 @@
                             "year": "2020",
                             "month": "10"
                         },
-                        "diagramURL": "https://",
-                        "descriptionURL": "https://",
-                        "gitHubURL": "https://",
+                        "diagramURL": "https://raw.githubusercontent.com/cloudinformationmodel/cloudinformationmodel/v0.1.2/src/subjectAreas/Party/diagram.png",
+                        "descriptionURL": "https://raw.githubusercontent.com/cloudinformationmodel/cloudinformationmodel/v0.1.2/src/subjectAreas/Party/about.jsonld",
+                        "gitHubURL": "https://github.com/cloudinformationmodel/cloudinformationmodel/tree/master/src/subjectAreas/Party",
                         "tags": [
                             "#tag1",
                             "#tag2"
@@ -139,9 +139,9 @@
                             "year": "2020",
                             "month": "10"
                         },
-                        "diagramURL": "https://",
-                        "descriptionURL": "https://",
-                        "gitHubURL": "https://",
+                        "diagramURL": "https://raw.githubusercontent.com/cloudinformationmodel/cloudinformationmodel/v0.1.2/src/subjectAreas/SalesOrder/diagram.png",
+                        "descriptionURL": "https://raw.githubusercontent.com/cloudinformationmodel/cloudinformationmodel/v0.1.2/src/subjectAreas/SalesOrder/about.jsonld",
+                        "gitHubURL": "https://github.com/cloudinformationmodel/cloudinformationmodel/tree/master/src/subjectAreas/SalesOrder",
                         "tags": [
                             "#tag1",
                             "#tag2"
@@ -193,8 +193,8 @@
                             "year": "2020",
                             "month": "10"
                         },
-                        "diagramURL": "https://",
-                        "descriptionURL": "https://",
+                        "diagramURL": "https://raw.",
+                        "descriptionURL": "https://raw.",
                         "gitHubURL": "https://",
                         "tags": [
                             "#tag1",
@@ -227,9 +227,9 @@
                             "year": "2020",
                             "month": "10"
                         },
-                        "diagramURL": "https://",
-                        "descriptionURL": "https://",
-                        "gitHubURL": "https://",
+                        "diagramURL": "https://raw.githubusercontent.com/cloudinformationmodel/cloudinformationmodel/v0.1.2/src/subjectAreas/Shipment/diagram.png",
+                        "descriptionURL": "https://raw.githubusercontent.com/cloudinformationmodel/cloudinformationmodel/v0.1.2/src/subjectAreas/Shipment/about.jsonld",
+                        "gitHubURL": "https://github.com/cloudinformationmodel/cloudinformationmodel/tree/master/src/subjectAreas/Shipment",
                         "tags": [
                             "#tag1",
                             "#tag2"
@@ -261,9 +261,9 @@
                             "year": "2020",
                             "month": "10"
                         },
-                        "diagramURL": "https://",
-                        "descriptionURL": "https://",
-                        "gitHubURL": "https://",
+                        "diagramURL": "https://raw.githubusercontent.com/cloudinformationmodel/cloudinformationmodel/v0.1.2/src/subjectAreas/PaymentMethod/diagram.png",
+                        "descriptionURL": "https://raw.githubusercontent.com/cloudinformationmodel/cloudinformationmodel/v0.1.2/src/subjectAreas/PaymentMethod/about.jsonld",
+                        "gitHubURL": "https://github.com/cloudinformationmodel/cloudinformationmodel/tree/master/src/subjectAreas/PaymentMethod",
                         "tags": [
                             "#tag1",
                             "#tag2"
@@ -288,9 +288,9 @@
                             "year": "2020",
                             "month": "10"
                         },
-                        "diagramURL": "https://",
-                        "descriptionURL": "https://",
-                        "gitHubURL": "https://",
+                        "diagramURL": "https://raw.githubusercontent.com/cloudinformationmodel/cloudinformationmodel/v0.1.2/src/subjectAreas/Payment/diagram.png",
+                        "descriptionURL": "https://raw.githubusercontent.com/cloudinformationmodel/cloudinformationmodel/v0.1.2/src/subjectAreas/Payment/about.jsonld",
+                        "gitHubURL": "https://github.com/cloudinformationmodel/cloudinformationmodel/tree/master/src/subjectAreas/Payment",
                         "tags": [
                             "#tag1",
                             "#tag2"
