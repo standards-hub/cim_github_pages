@@ -9,63 +9,296 @@
         "email": "info@cloudinformationmodel.org"
     },
     "domains": [
-        {
-            "id": "0",
-            "name": "Produce",
-            "description": "Bla, bla",
-            "subjectAreas": [
-                {
-                    "id": "0",
-                    "name": "Product",
-                    "description": "Bla, bla",
-                    "versions": [
-                        {
-                            "id": "0",
-                            "version": "v1.0",
-                            "versionDate": {
-                                "year": "2020",
-                                "month": "10",
-                                "day": "02"
-                            },
-                            "updateDate": {
-                                "year": "2020",
-                                "month": "10"
-                            },
-                            "diagramURL": "https://",
-                            "descriptionURL": "https://",
-                            "gitHubURL": "https://",
-                            "tags": [
-                                "#tag1",
-                                "#tag2",
-                                "#tag3",
-                                "#tag4"
-                            ]
+     {
+        "id": "value",
+        "name": "Produce",
+        "description": "Bla, bla",
+        "subjectAreas" : [
+            {
+                "id":"",
+                "name": "Product",
+                "description": "Bla, bla",
+                "versions" : [
+                    {
+                        "id": "",
+                        "version": "1.0",
+                        "versionDate" : {
+                            "year": "2020",
+                            "month": "10",
+                            "day": "02"
                         },
-                        {
-                            "id": "1",
-                            "version": "v1.1",
-                            "versionDate": {
-                                "year": "",
-                                "month": "",
-                                "day": ""
-                            },
-                            "updateDate": {
-                                "year": "",
-                                "month": ""
-                            },
-                            "diagramURL": "https://",
-                            "descriptionURL": "https://",
-                            "gitHubURL": "https://",
-                            "tags": [
-                                "#tag1",
-                                "#tag2",
-                                "#tag3",
-                                "#tag4"
-                            ]
-                        }
-                    ]
-                }
-             ]
+                        "updateDate": {
+                            "year": "2020",
+                            "month": "10"
+                        },
+                        "diagramURL": "https://",
+                        "descriptionURL": "https://",
+                        "gitHubURL": "https://",
+                        "tags": [
+                            "#tag1",
+                            "#tag2"
+                        ]
+                    },
+                                        {
+                        "id": "",
+                        "version": "1.1",
+                        "versionDate" : {
+                            "year": "",
+                            "month": "",
+                            "day": ""
+                        },
+                        "updateDate": {
+                            "year": "",
+                            "month": ""
+                        },
+                        "diagramURL": "https://",
+                        "descriptionURL": "https://",
+                        "gitHubURL": "https://",
+                        "tags": [
+                            "#tag1",
+                            "#tag2"
+                        ]
+                    }
+                ]
+            }
+        ]
+        },
+     {
+        "id": "value",
+        "name": "Market",
+        "description": "Bla, bla",
+        "subjectAreas" : [
+            {
+                "id":"",
+                "name": "Party",
+                "description": "Bla, bla",
+                "versions" : [
+                    {
+                        "id": "",
+                        "version": "1.0",
+                        "versionDate" : {
+                            "year": "2020",
+                            "month": "10",
+                            "day": "02"
+                        },
+                        "updateDate": {
+                            "year": "2020",
+                            "month": "10"
+                        },
+                        "diagramURL": "https://",
+                        "descriptionURL": "https://",
+                        "gitHubURL": "https://",
+                        "tags": [
+                            "#tag1",
+                            "#tag2"
+                        ]
+                    },
+                                        {
+                        "id": "",
+                        "version": "1.1",
+                        "versionDate" : {
+                            "year": "",
+                            "month": "",
+                            "day": ""
+                        },
+                        "updateDate": {
+                            "year": "",
+                            "month": ""
+                        },
+                        "diagramURL": "https://",
+                        "descriptionURL": "https://",
+                        "gitHubURL": "https://",
+                        "tags": [
+                            "#tag1",
+                            "#tag2"
+                        ]
+                    }
+                ]
+            }
+        ]
+        },
+     {
+        "id": "value",
+        "name": "Sell",
+        "description": "Bla, bla",
+        "subjectAreas" : [
+            {
+                "id":"",
+                "name": "Sales Order",
+                "description": "Bla, bla",
+                "versions" : [
+                    {
+                        "id": "",
+                        "version": "1.0",
+                        "versionDate" : {
+                            "year": "2020",
+                            "month": "10",
+                            "day": "02"
+                        },
+                        "updateDate": {
+                            "year": "2020",
+                            "month": "10"
+                        },
+                        "diagramURL": "https://",
+                        "descriptionURL": "https://",
+                        "gitHubURL": "https://",
+                        "tags": [
+                            "#tag1",
+                            "#tag2"
+                        ]
+                    },
+                                        {
+                        "id": "",
+                        "version": "1.1",
+                        "versionDate" : {
+                            "year": "",
+                            "month": "",
+                            "day": ""
+                        },
+                        "updateDate": {
+                            "year": "",
+                            "month": ""
+                        },
+                        "diagramURL": "https://",
+                        "descriptionURL": "https://",
+                        "gitHubURL": "https://",
+                        "tags": [
+                            "#tag1",
+                            "#tag2"
+                        ]
+                    }
+                ]
+            }
+        ]
+        },
+     {
+        "id": "value",
+        "name": "Service",
+        "description": "Bla, bla",
+        "subjectAreas" : [
+            {
+                "id":"",
+                "name": "Case",
+                "description": "Bla, bla",
+                "versions" : [
+                    {
+                        "id": "",
+                        "version": "1.0",
+                        "versionDate" : {
+                            "year": "2020",
+                            "month": "10",
+                            "day": "02"
+                        },
+                        "updateDate": {
+                            "year": "2020",
+                            "month": "10"
+                        },
+                        "diagramURL": "https://",
+                        "descriptionURL": "https://",
+                        "gitHubURL": "https://",
+                        "tags": [
+                            "#tag1",
+                            "#tag2"
+                        ]
+                    }
+                ]
+            }
+        ]
+        },
+     {
+        "id": "value",
+        "name": "Fulfill",
+        "description": "Bla, bla",
+        "subjectAreas" : [
+            {
+                "id":"",
+                "name": "Shipment",
+                "description": "Bla, bla",
+                "versions" : [
+                    {
+                        "id": "",
+                        "version": "1.0",
+                        "versionDate" : {
+                            "year": "2020",
+                            "month": "10",
+                            "day": "02"
+                        },
+                        "updateDate": {
+                            "year": "2020",
+                            "month": "10"
+                        },
+                        "diagramURL": "https://",
+                        "descriptionURL": "https://",
+                        "gitHubURL": "https://",
+                        "tags": [
+                            "#tag1",
+                            "#tag2"
+                        ]
+                    }
+                ]
+            }
+        ]
+        },
+     {
+        "id": "value",
+        "name": "Finance",
+        "description": "Bla, bla",
+        "subjectAreas" : [
+            {
+                "id":"",
+                "name": "Payment Method",
+                "description": "Bla, bla",
+                "versions" : [
+                    {
+                        "id": "",
+                        "version": "1.0",
+                        "versionDate" : {
+                            "year": "2020",
+                            "month": "10",
+                            "day": "02"
+                        },
+                        "updateDate": {
+                            "year": "2020",
+                            "month": "10"
+                        },
+                        "diagramURL": "https://",
+                        "descriptionURL": "https://",
+                        "gitHubURL": "https://",
+                        "tags": [
+                            "#tag1",
+                            "#tag2"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id":"",
+                "name": "Payment",
+                "description": "Bla, bla",
+                "versions" : [
+                    {
+                        "id": "",
+                        "version": "1.0",
+                        "versionDate" : {
+                            "year": "2020",
+                            "month": "10",
+                            "day": "02"
+                        },
+                        "updateDate": {
+                            "year": "2020",
+                            "month": "10"
+                        },
+                        "diagramURL": "https://",
+                        "descriptionURL": "https://",
+                        "gitHubURL": "https://",
+                        "tags": [
+                            "#tag1",
+                            "#tag2"
+                        ]
+                    }
+                ]
+            }
+        ]
         }
-    ]
+     ]
 }
