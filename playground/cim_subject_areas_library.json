@@ -75,7 +75,7 @@
                 "description": "Bla, bla",
                 "versions" : [
                     {
-                        "id": "mar_pat_v10",
+                        "id": "mar_par_v10",
                         "version": "1.0",
                         "versionDate" : {
                             "year": "2020",
@@ -95,7 +95,7 @@
                         ]
                     },
                                         {
-                        "id": "mar_pat_v10",
+                        "id": "mar_par_v11",
                         "version": "1.1",
                         "versionDate" : {
                             "year": "",
@@ -273,7 +273,7 @@
                 ]
             },
             {
-                "id":"fin_pay_",
+                "id":"fin_pay",
                 "name": "Payment",
                 "description": "Bla, bla",
                 "versions" : [
