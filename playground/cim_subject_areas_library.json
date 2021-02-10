@@ -8,19 +8,20 @@
         "about": "About CIM",
         "email": "info@cloudinformationmodel.org"
     },
+   
     "domains": [
      {
-        "id": "value",
+        "id": "pro",
         "name": "Produce",
         "description": "Bla, bla",
         "subjectAreas" : [
             {
-                "id":"",
+                "id":"pro_pro",
                 "name": "Product",
                 "description": "Bla, bla",
                 "versions" : [
                     {
-                        "id": "",
+                        "id": "pro_pro_v10",
                         "version": "1.0",
                         "versionDate" : {
                             "year": "2020",
@@ -40,7 +41,7 @@
                         ]
                     },
                                         {
-                        "id": "",
+                        "id": "pro_pro_v11",
                         "version": "1.1",
                         "versionDate" : {
                             "year": "",
@@ -64,17 +65,17 @@
         ]
         },
      {
-        "id": "value",
+        "id": "mar",
         "name": "Market",
         "description": "Bla, bla",
         "subjectAreas" : [
             {
-                "id":"",
+                "id":"mar_par",
                 "name": "Party",
                 "description": "Bla, bla",
                 "versions" : [
                     {
-                        "id": "",
+                        "id": "mar_pat_v10",
                         "version": "1.0",
                         "versionDate" : {
                             "year": "2020",
@@ -94,7 +95,7 @@
                         ]
                     },
                                         {
-                        "id": "",
+                        "id": "mar_pat_v10",
                         "version": "1.1",
                         "versionDate" : {
                             "year": "",
@@ -118,17 +119,17 @@
         ]
         },
      {
-        "id": "value",
+        "id": "sel",
         "name": "Sell",
         "description": "Bla, bla",
         "subjectAreas" : [
             {
-                "id":"",
+                "id":"sel_sal",
                 "name": "Sales Order",
                 "description": "Bla, bla",
                 "versions" : [
                     {
-                        "id": "",
+                        "id": "sel_sal_v10",
                         "version": "1.0",
                         "versionDate" : {
                             "year": "2020",
@@ -148,7 +149,7 @@
                         ]
                     },
                                         {
-                        "id": "",
+                        "id": "sel_sal_v11",
                         "version": "1.1",
                         "versionDate" : {
                             "year": "",
@@ -172,17 +173,17 @@
         ]
         },
      {
-        "id": "value",
+        "id": "ser",
         "name": "Service",
         "description": "Bla, bla",
         "subjectAreas" : [
             {
-                "id":"",
+                "id":"ser_cas",
                 "name": "Case",
                 "description": "Bla, bla",
                 "versions" : [
                     {
-                        "id": "",
+                        "id": "ser_cas_v10",
                         "version": "1.0",
                         "versionDate" : {
                             "year": "2020",
@@ -206,17 +207,17 @@
         ]
         },
      {
-        "id": "value",
+        "id": "ful",
         "name": "Fulfill",
         "description": "Bla, bla",
         "subjectAreas" : [
             {
-                "id":"",
+                "id":"ful_shi",
                 "name": "Shipment",
                 "description": "Bla, bla",
                 "versions" : [
                     {
-                        "id": "",
+                        "id": "ful_shi_v10",
                         "version": "1.0",
                         "versionDate" : {
                             "year": "2020",
@@ -240,17 +241,17 @@
         ]
         },
      {
-        "id": "value",
+        "id": "fin",
         "name": "Finance",
         "description": "Bla, bla",
         "subjectAreas" : [
             {
-                "id":"",
+                "id":"fin_paymet",
                 "name": "Payment Method",
                 "description": "Bla, bla",
                 "versions" : [
                     {
-                        "id": "",
+                        "id": "fin_paymet_v10",
                         "version": "1.0",
                         "versionDate" : {
                             "year": "2020",
@@ -272,12 +273,12 @@
                 ]
             },
             {
-                "id":"",
+                "id":"fin_pay_",
                 "name": "Payment",
                 "description": "Bla, bla",
                 "versions" : [
                     {
-                        "id": "",
+                        "id": "fin_pay_v10",
                         "version": "1.0",
                         "versionDate" : {
                             "year": "2020",
