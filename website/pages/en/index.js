@@ -20,7 +20,7 @@ class HomeSplash extends React.Component {
     const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`;
     const langPart = `${language ? `${language}/` : ''}`;
     const docUrl = (doc) => `${baseUrl}${docsPart}${langPart}${doc}`;
-
+    
     const SplashContainer = (props) => (
       <div className="homeContainer">
         <div className="homeSplashFade">
@@ -36,7 +36,7 @@ class HomeSplash extends React.Component {
     );
 
     const ProjectTitle = (props) => (
-      <h2 className="projectTitle">
+      <h2 className="DDDD">
         {props.title}
         <small>{props.tagline}</small>
       </h2>
@@ -181,8 +181,8 @@ class Index extends React.Component {
         baseUrl + (language ? `${language}/` : '') + page;
 
       return (
-        <div className="productShowcaseSection paddingBottom">
-          <h2>Who is Using This?</h2>
+      <div className="productShowcaseSection paddingBottom">
+          <h2>WSSSSS Using This?</h2>
           <p>This project is used by all these people</p>
           <div className="logos">{showcase}</div>
           <div className="more-users">
