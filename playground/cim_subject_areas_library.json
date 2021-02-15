@@ -10,17 +10,17 @@
     },
     "domains": [
      {
-        "id": "value",
+        "id": "produce",
         "name": "Produce",
         "description": "Bla, bla",
         "subjectAreas" : [
             {
-                "id":"",
+                "id":"product",
                 "name": "Product",
                 "description": "Bla, bla",
                 "versions" : [
                     {
-                        "id": "",
+                        "id": "product-v1_0",
                         "version": "1.0",
                         "versionDate" : {
                             "year": "2020",
@@ -40,7 +40,7 @@
                         ]
                     },
                                         {
-                        "id": "",
+                        "id": "product-v1_1",
                         "version": "1.1",
                         "versionDate" : {
                             "year": "",
@@ -64,17 +64,17 @@
         ]
         },
      {
-        "id": "value",
+        "id": "market",
         "name": "Market",
         "description": "Bla, bla",
         "subjectAreas" : [
             {
-                "id":"",
+                "id":"party",
                 "name": "Party",
                 "description": "Bla, bla",
                 "versions" : [
                     {
-                        "id": "",
+                        "id": "party-v1_0",
                         "version": "1.0",
                         "versionDate" : {
                             "year": "2020",
@@ -94,7 +94,7 @@
                         ]
                     },
                                         {
-                        "id": "",
+                        "id": "party-v1_1",
                         "version": "1.1",
                         "versionDate" : {
                             "year": "",
@@ -118,17 +118,17 @@
         ]
         },
      {
-        "id": "value",
+        "id": "sell",
         "name": "Sell",
         "description": "Bla, bla",
         "subjectAreas" : [
             {
-                "id":"",
+                "id":"sales-order",
                 "name": "Sales Order",
                 "description": "Bla, bla",
                 "versions" : [
                     {
-                        "id": "",
+                        "id": "sales-order-v1_0",
                         "version": "1.0",
                         "versionDate" : {
                             "year": "2020",
@@ -148,7 +148,7 @@
                         ]
                     },
                                         {
-                        "id": "",
+                        "id": "sales-order-v1_1",
                         "version": "1.1",
                         "versionDate" : {
                             "year": "",
@@ -172,17 +172,17 @@
         ]
         },
      {
-        "id": "value",
+        "id": "service",
         "name": "Service",
         "description": "Bla, bla",
         "subjectAreas" : [
             {
-                "id":"",
+                "id":"service",
                 "name": "Case",
                 "description": "Bla, bla",
                 "versions" : [
                     {
-                        "id": "",
+                        "id": "service-v1_0",
                         "version": "1.0",
                         "versionDate" : {
                             "year": "2020",
@@ -206,17 +206,17 @@
         ]
         },
      {
-        "id": "value",
+        "id": "fulfill",
         "name": "Fulfill",
         "description": "Bla, bla",
         "subjectAreas" : [
             {
-                "id":"",
+                "id":"shipment",
                 "name": "Shipment",
                 "description": "Bla, bla",
                 "versions" : [
                     {
-                        "id": "",
+                        "id": "shipment-v1_0",
                         "version": "1.0",
                         "versionDate" : {
                             "year": "2020",
@@ -240,17 +240,17 @@
         ]
         },
      {
-        "id": "value",
+        "id": "finance",
         "name": "Finance",
         "description": "Bla, bla",
         "subjectAreas" : [
             {
-                "id":"",
+                "id":"payment-method",
                 "name": "Payment Method",
                 "description": "Bla, bla",
                 "versions" : [
                     {
-                        "id": "",
+                        "id": "payment-method-v1_0",
                         "version": "1.0",
                         "versionDate" : {
                             "year": "2020",
@@ -272,12 +272,12 @@
                 ]
             },
             {
-                "id":"",
+                "id":"payment",
                 "name": "Payment",
                 "description": "Bla, bla",
                 "versions" : [
                     {
-                        "id": "",
+                        "id": "payment-v1_0",
                         "version": "1.0",
                         "versionDate" : {
                             "year": "2020",
