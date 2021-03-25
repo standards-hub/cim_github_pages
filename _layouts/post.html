@@ -79,6 +79,34 @@ layout: default
     </div>
   </div>
 
+<body onload="myFunction()">
+  <div class="page-content">
+    <div class="wrapper">
+        
+  </div>
+</div>
+
+<div class="home">
+  <div class="tier">
+    <div class="container">
+        <table id="example" class="display">
+            <thead>
+              <tr>
+                <th scope="col">Domain</th>
+                <th scope="col">Subject Areas</th>
+                <th scope="col">Version</th>
+                <th scope="col">Published</th>
+                <th scope="col">Diagram</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead> 
+            <tbody id="con">
+            </tbody>
+        </table>
+    </div>
+    </div>
+  </div>
+
 </body>
   <script>
     function myFunction(){
@@ -93,10 +121,6 @@ layout: default
             for(var i=0;i<data.domains.length;i++){
                 for(var j=0;j<data.domains[i].subjectAreas.length;j++){
                     for(var k=0;k<data.domains[i].subjectAreas[j].versions.length;k++){
-                      if(data.domains[i].name=data.domains[i].name){
-                        '<td>'+ +'</td>'
-                      }
-                      console.log(data.domains[i].name=data.domains[i].name)
                 con.innerHTML=con.innerHTML+
                 '<td>'+data.domains[i].name+'</td>'+
                 '<td>'+data.domains[i].subjectAreas[j].name+'</td>'+
@@ -107,7 +131,11 @@ layout: default
                     }
                 }
             }
-        }
-    }    
-}
-</script>
+      }
+    }      
+  }
+
+  $(document).ready(function() {
+    $('#example').dataTable( {
+    } );
+  } );
