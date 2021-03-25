@@ -36,22 +36,24 @@ layout: default
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="https://standards-hub.github.io/cim_github_pages/">
-                <img src="./img/cim-text-hztl-color.png" style="max-width: 450px;">
+              <a class="navbar-brand" href="/">
+                <img src="/img/cim-text-hztl-color.png" style="max-width: 450px;">
             </a>
           </a>
           </div>
           <div class="navbar-collapse collapse" id="navbar">
             <ul class="nav navbar-nav">
                 <li><a class="page-link" href="https://open-manufacturing.org" target="_blank" style="color: #000">Website</a></li>
-                <li><a class="page-link" href="https://standards-hub.github.io/cim_github_pages/table" style="color: #000">Subject Areas</a></li>
+                {%- for post in site.posts -%}
+                <li><a class="page-link" href="{{ post.url | relative_url }}" style="color: #000">Subject Areas</a></li>
+                {%- endfor -%}
                 <li><a class="page-link" target="_blank" href="https://github.com/OpenManufacturingPlatform"><i class="fab fa-github-alt" style="color: #000"></i></a></li>
 
             </ul>
         </div>
       </div>
   </nav>
-
+<body onload="myFunction()">
   <div class="page-content">
     <div class="wrapper">
         
@@ -61,8 +63,7 @@ layout: default
 <div class="home">
   <div class="tier">
     <div class="container">
-        <button type="button" class="btn btn-primary" id="boton" style="margin-top: 50px;">Recargar</button>
-        <table class="table">
+        <table class="table" >
             <thead>
               <tr>
                 <th scope="col">Domain</th>
@@ -80,10 +81,9 @@ layout: default
     </div>
   </div>
 
+</body>
   <script>
-    let boton=document.getElementById('boton');
-    let con=document.getElementById('con');
-    boton.onclick=function(){
+    function myFunction(){
     let xhtml=new XMLHttpRequest();
     xhtml.open('GET','https://raw.githubusercontent.com/standards-hub/cim_github_pages/dev/playground/cim_subject_areas_library.json',true);
     xhtml.send();
@@ -95,9 +95,13 @@ layout: default
             for(var i=0;i<data.domains.length;i++){
                 for(var j=0;j<data.domains[i].subjectAreas.length;j++){
                     for(var k=0;k<data.domains[i].subjectAreas[j].versions.length;k++){
+                      if(data.domains[i].name=data.domains[i].name){
+                        '<td>'+ +'</td>'
+                      }
+                      console.log(data.domains[i].name=data.domains[i].name)
                 con.innerHTML=con.innerHTML+
                 '<td>'+data.domains[i].name+'</td>'+
-                '<td>'+data.domains[i].subjectAreas[j].name+', '+' </td>'+
+                '<td>'+data.domains[i].subjectAreas[j].name+'</td>'+
                 '<td>'+data.domains[i].subjectAreas[j].versions[k].version+'</td>'+
                 '<td>'+data.domains[i].subjectAreas[j].versions[k].versionDate['day']+'/'+'</td>'+'</th>'+
                 '<td><a target="_blank" href="'+data.domains[i].subjectAreas[j].versions[k].diagramURL+'">Click Me!</a></td>'+
@@ -106,6 +110,6 @@ layout: default
                 }
             }
         }
-    }
+    }    
 }
 </script>
