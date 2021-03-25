@@ -80,9 +80,7 @@ th, td {
           <div class="navbar-collapse collapse" id="navbar">
             <ul class="nav navbar-nav">                  
                     <li><a class="page-link" href="https://open-manufacturing.org" target="_blank" style="color: #000">Website</a></li>
-                    {%- for post in site.posts -%}
-                    <li><a class="page-link" href="{{ post.url | relative_url }}" style="color: #000">Subject Areas</a></li>
-                    {%- endfor -%}
+                    <li><a class="page-link" href="/cim_github_pages/{{ post.url | relative_url }}" style="color: #000">Subject Areas</a></li>
                     <li><a class="page-link" target="_blank" href="https://github.com/OpenManufacturingPlatform"><i class="fab fa-github-alt" style="color: #000"></i></a></li>
                 
             </ul>
@@ -102,7 +100,7 @@ th, td {
 <div class="home">
 <div class="tier">
   <div class="container">
-    <table style="table-layout: fixed;width: 1200px;">
+    <table style="table-layout: fixed;width: 1200px; margin-top: 90px;">
 
       <tr style="border: 1px solid #ffffff00;">
         <td class="td"><i class="fas fa-check-circle" style="font-size: 50px; margin-left: 20px;"></i><h5 style="text-align: center;">{{page.subject1}}</h5></td>
