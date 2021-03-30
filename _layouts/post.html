@@ -58,10 +58,23 @@ layout: default
     <div class="wrapper">
   </div>
 </div>
+<body onload="myFunction()">
+  <div class="page-content">
+    <div class="wrapper">
+        
+  </div>
+</div>
+
 <div class="home">
   <div class="tier">
-    <div class="container" style="margin-top:85px">
-        <table id="example" class="display">
+    <div class="container">
+      <div class="form-group col-md-4 no-padding">
+        <select class="form-control" id="sel1">
+          <option value="Filter by">Domains</option>
+          <option value="All">All</option>
+        </select>
+      </div>
+      <table id="tablaUsuarios" class="table-striped table-bordered" style="width:100%">
             <thead>
               <tr>
                 <th scope="col">Domain</th>
@@ -78,38 +91,25 @@ layout: default
     </div>
     </div>
   </div>
+
 </body>
-
-<script>
-    function myFunction(){
-    let xhtml=new XMLHttpRequest();
-    xhtml.open('GET','https://raw.githubusercontent.com/standards-hub/cim_github_pages/dev/playground/cim_subject_areas_library.json',true);
-    xhtml.send();
-    xhtml.onreadystatechange=function(){
-      if(this.readyState==4 && this.status==200){
-            console.log(this.responseText);
-            let data=JSON.parse(this.responseText);
-            con.innerHTML='';
-            for(var i=0;i<data.domains.length;i++){
-                for(var j=0;j<data.domains[i].subjectAreas.length;j++){
-                    for(var k=0;k<data.domains[i].subjectAreas[j].versions.length;k++){
-                con.innerHTML=con.innerHTML+
-                '<td>'+data.domains[i].name+'</td>'+
-                '<td>'+data.domains[i].subjectAreas[j].name+'</td>'+
-                '<td>'+data.domains[i].subjectAreas[j].versions[k].version+'</td>'+
-                '<td>'+data.domains[i].subjectAreas[j].versions[k].versionDate['day']+'/'+'</td>'+'</th>'+
-                '<td><a target="_blank" href="'+data.domains[i].subjectAreas[j].versions[k].diagramURL+'">Click Me!</a></td>'+
-                '<td>'+data.domains[i].subjectAreas[j].description+'</td>'
-                    }
-                }
-            }
-      }
-    }      
-  }
-
-  $(document).ready(function() {
-    $('#example').dataTable( {
-    } );
-  } );
-
+  <script>
+    $(document).ready(function() {
+          const url = 'https://raw.githubusercontent.com/standards-hub/cim_github_pages/dev/playground/cim_subject_areas_library.json';
+          console.log(url);
+          $('#tablaUsuarios').DataTable( {
+            ajax:{
+                    url:url,
+                    dataSrc: 'domains'
+            },
+            "columns":[
+                {"data": "name"},
+                {"data": 'subjectAreas.[].name'},
+                {"data": 'subjectAreas.[].versions[].version'},
+                {"data": 'subjectAreas.[].versions[].versionDate.year'},
+                {"data": "name"},
+                {"data": 'subjectAreas.[].description'}
+            ]  
+          });
+      });
 </script>
