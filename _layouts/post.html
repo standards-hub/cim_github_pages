@@ -115,10 +115,10 @@ title: CIM
               <th scope="col">Subject Areas</th>
               <th scope="col">Version</th>
               <th scope="col">Published</th>
-              <th scope="col">Docu</th>
+              <th scope="col">Docs</th>
               <th scope="col">Description</th>
               <th scope="col">GitHub</th>
-              <th scope="col">Tags..................................</th>
+              <th scope="col">Tags</th>
             </tr>
           </thead> 
           <tbody id="con">
@@ -171,7 +171,22 @@ $(document).ready(function() {
                       return a;
                     }
                   },
-                  {"data": 'subjectAreas.[].versions[].versionDate.year'},
+                  {
+                    "data": 'subjectAreas.[].versions[].versionDate',
+                    "render": function (data, type, row, meta) {
+                      let fecha='';
+                      data.forEach( function(valor, indice, array) {
+                        if (Array.isArray(valor)){
+                          valor.forEach( function(valorX, indiceX, arrayX){    
+                            fecha=valorX['year']+'-'+valorX['month']+'-'+valorX['day']+'</br>';                          
+                          });
+                        }else{
+                          fecha=valor['year']+'</br>';
+                        }
+                      });
+                      return fecha;
+                    }
+                  },
                   {
                     "className": "text-center",
                     "width": "4%",
