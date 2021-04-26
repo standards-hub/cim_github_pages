@@ -130,12 +130,8 @@ title: CIM
   
   </body>
     <script>
-      $(document).ready(function() {
-      var dt = $('#tablaUsuarios').dataTable();
-      dt.fnDestroy();
-      });
-  
-$(document).ready(function() {
+
+  $(document).ready(function() {
     const url = 'https://raw.githubusercontent.com/standards-hub/cim_github_pages/dev/playground/cim_subject_areas_library.json';
     var table = $('#tablaUsuarios').DataTable({
       ajax:{
@@ -155,8 +151,6 @@ $(document).ready(function() {
                     }
                   },
                   {
-                    "className": "text-center",
-                    "width": "4%",
                     "data": 'subjectAreas.[].versions[].version',
                     "render": function (data, type, row, meta) {
                       let a = '';
@@ -173,8 +167,6 @@ $(document).ready(function() {
                     }
                   },
                   {
-                    "className": "text-center",
-                    "width": "4%",
                     "data": 'subjectAreas.[].versions[].versionDate',
                     "render": function (data, type, row, meta) {
                       let fecha='';
@@ -245,6 +237,13 @@ $(document).ready(function() {
                   }
               ]  
             });
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const search = urlParams.get('search')
+    console.log(search);
+    if(search){
+        table.search(search);
+    }
 
     $('#sel1').change(function() {
         if (this.value === "All") {
@@ -287,4 +286,3 @@ $(document).ready(function() {
     });
 
 </script>
-
