@@ -131,7 +131,7 @@ title: CIM
   </body>
     <script>
 
- $(document).ready(function() {
+$(document).ready(function() {
     const url = 'https://raw.githubusercontent.com/standards-hub/cim_github_pages/dev/playground/cim_subject_areas_library.json';
     var table = $('#tablaUsuarios').DataTable({
       ajax:{
@@ -145,7 +145,7 @@ title: CIM
                     "render": function (data, type, row, meta) {
                       let a = '';
                       data.forEach( function(valor, indice, array) {
-                        a += ('<p>'+valor+'</p></br>');
+                        a += ('<p style="margin-top:20px">'+valor+'</p></br>');
                       });
                       return a;
                     }
@@ -157,10 +157,10 @@ title: CIM
                       data.forEach( function(valor, indice, array) {
                         if (Array.isArray(valor)){
                           valor.forEach( function(valorX, indiceX, arrayX){    
-                           a += ('<p>'+valorX+'</p></br>');
+                           a += ('<p style="margin-top:20px">'+valorX+'</p></br>');
                           });
                         }else{
-                          a += ('<p>'+valor+'</p></br>');
+                          a += ('<p style="margin-top:20px">'+valor+'</p></br>');
                         }
                       });
                       return a;
