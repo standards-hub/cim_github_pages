@@ -265,10 +265,10 @@ $(document).ready(function() {
                       data.forEach( function(valor, indice, array) {
                         if (Array.isArray(valor)){
                           valor.forEach( function(valorX, indiceX, arrayX){    
-                           a += ('<p style="margin: 30px 1px 10px;">'+valorX+'</p></br>');
+                           a += ('<p style="margin: 10px 1px 10px;">'+valorX+'</p></br>');
                           });
                         }else{
-                          a += ('<p style="margin: 30px 1px 10px;">'+valor+'</p></br>');
+                          a += ('<p style="margin: 10px 1px 10px;">'+valor+'</p></br>');
                         }
                       });
                       return a;
