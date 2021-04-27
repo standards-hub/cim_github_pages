@@ -201,9 +201,13 @@ title: CIM
                     }
                   },
                   {
-                    "className": "text-center",
+                    //"className": "text-center",
                     "width": "4%",
                     "data": 'subjectAreas.[].versions[].descriptionURL',
+                    "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
+                      $(nTd).css('text-align', 'justify')
+                      $(nTd).css('font-size', '12px')
+                    },
                     "render": function (data, type, row, meta) {
                       let a = '';
                       data.forEach(function(valor, indice, array) {
@@ -228,7 +232,7 @@ title: CIM
                               }).done(function (data) {
                                 let d = JSON.parse(data)
                                 let desc = d.description;
-                                $(currentCell).text('<p style="font-size: 12px; text-align: justify;>'+desc+'</p></br>');
+                                $(currentCell).text(desc);
                               });
                             }catch{}
                         }
