@@ -29,7 +29,7 @@ title: CIM
 
   ga('create', 'UA-76165511-1', 'auto');
   ga('send', 'pageview');
-
+  let x = [];
 </script>
 
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background: rgb(255 255 255);border: 1px solid #d0c6c6;">
@@ -131,7 +131,7 @@ title: CIM
   </body>
     <script>
 
-$(document).ready(function() {
+  $(document).ready(function() {
     const url = 'https://raw.githubusercontent.com/standards-hub/cim_github_pages/dev/playground/cim_subject_areas_library.json';
     var table = $('#tablaUsuarios').DataTable({
       ajax:{
@@ -141,6 +141,7 @@ $(document).ready(function() {
               "columns":[
                   {"data": "name"},
                   {
+                    "width": "20%",
                     "data": 'subjectAreas.[].name',
                     "render": function (data, type, row, meta) {
                       let a = '';
@@ -151,6 +152,7 @@ $(document).ready(function() {
                     }
                   },
                   {
+                    "width": "10px",
                     "data": 'subjectAreas.[].versions[].version',
                     "render": function (data, type, row, meta) {
                       let a = '';
@@ -167,16 +169,17 @@ $(document).ready(function() {
                     }
                   },
                   {
+                    "width": "10%",
                     "data": 'subjectAreas.[].versions[].versionDate',
                     "render": function (data, type, row, meta) {
                       let fecha='';
                       data.forEach( function(valor, indice, array) {
                         if (Array.isArray(valor)){
                           valor.forEach( function(valorX, indiceX, arrayX){    
-                            fecha=valorX['year']+'-'+valorX['month']+'-'+valorX['day']+'</br>';                          
+                            fecha+=('<p style="margin-top:20px">'+valorX['year']+'-'+valorX['month']+'-'+valorX['day']+'</p></br>');                          
                           });
                         }else{
-                          fecha=valor['year']+'</br>';
+                          fecha+=('<p style="margin-top:20px">'+valor['year']+'</p></br>');
                         }
                       });
                       return fecha;
@@ -184,17 +187,17 @@ $(document).ready(function() {
                   },
                   {
                     "className": "text-center",
-                    "width": "4%",
+                    "width": "10%",
                     "data": 'subjectAreas.[].versions[].diagramURL',
                     "render": function (data, type, row, meta) {
                       let a = '';
                       data.forEach( function(valor, indice, array) {
                         if (Array.isArray(valor)){
                           valor.forEach( function(valorX, indiceX, arrayX){    
-                            a += '<a href="'+valorX+'" target="_blank"><img src="https://www.flaticon.es/premium-icon/icons/svg/3936/3936465.svg" "height="20" width="25"></a></br>';
+                            a += '<a href="'+valorX+'" target="_blank"><img src="https://www.flaticon.es/svg/vstatic/svg/548/548438.svg?token=exp=1619543316~hmac=ab42b0d7f47b49001130c9a604ef5fc3" "height="20" width="25"></a></br>';
                           });
                         }else{
-                          a += '<a href="'+valor+'" target="_blank"><img src="https://www.flaticon.es/premium-icon/icons/svg/3936/3936465.svg" "height="20" width="25"></a></br>';
+                          a += '<a href="'+valor+'" target="_blank"><img src="https://www.flaticon.es/svg/vstatic/svg/548/548438.svg?token=exp=1619543316~hmac=ab42b0d7f47b49001130c9a604ef5fc3" "height="20" width="25"></a></br>';
                         }
                       });
                       return a;
@@ -202,17 +205,16 @@ $(document).ready(function() {
                   },
                   {
                     //"className": "text-center",
-                    "width": "4%",
+                    "width": "30%",
                     "data": 'subjectAreas.[].versions[].descriptionURL',
                     "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
                       $(nTd).css('text-align', 'justify')
                       $(nTd).css('font-size', '14px')
                     },
                     "render": function (data, type, row, meta) {
-                      let a = '';
-                      data.forEach(function(valor, indice, array) {
+                      data.forEach( function(valor, indice, array) {
                         if (Array.isArray(valor)){
-                          valor.forEach(function(valorX, indiceX, arrayX){
+                          valor.forEach( function(valorX, indiceX, arrayX){
                             try{
                               let currentCell = $("#tablaUsuarios").DataTable().cells({"row":meta.row, "column":meta.col}).nodes(0);
                               $.ajax({
@@ -220,19 +222,34 @@ $(document).ready(function() {
                               }).done(function (data) {
                                 let d = JSON.parse(data)
                                 let desc = d.description;
-                                $(currentCell).text(desc);
+                                if(x[meta.row]){
+                                  x[meta.row].push(desc+'</br>');
+                                }
+                                else{
+                                  x[meta.row]=[];
+                                }
+                                console.log(meta.row, x[0])
+                                x[meta.row] = x[meta.row].filter((v, i, a) => a.indexOf(v) === i);
+                                $(currentCell).text(x[meta.row].toString());
                               });
-                            }catch{}
+                            }catch{}                     
                           });
                         }else{
-                            try{
+                          try{
                               let currentCell = $("#tablaUsuarios").DataTable().cells({"row":meta.row, "column":meta.col}).nodes(0);
                               $.ajax({
                                   url: valor
                               }).done(function (data) {
                                 let d = JSON.parse(data)
                                 let desc = d.description;
-                                $(currentCell).text(desc);
+                                if(x[meta.row]){
+                                  x[meta.row].push(desc+'</br>');
+                                }
+                                else{
+                                  x[meta.row]=[];
+                                }
+                                x[meta.row] = x[meta.row].filter((v, i, a) => a.indexOf(v) === i);
+                                $(currentCell).text(x[meta.row].toString());
                               });
                             }catch{}
                         }
@@ -242,7 +259,7 @@ $(document).ready(function() {
                   },
                   {
                     "className": "text-center",
-                    "width": "4%",
+                    "width": "10%",
                     "data": 'subjectAreas.[].versions[].gitHubURL',
                     "render": function (data, type, row, meta) {
                       let a = '';
@@ -253,22 +270,6 @@ $(document).ready(function() {
                           });
                         }else{
                           a += '<a href="'+valor+'" target="_blank"><img src="https://image.flaticon.com/icons/png/512/25/25231.png" "height="20" width="25"></a></br>';
-                        }
-                      });
-                      return a;
-                    }
-                  },
-                  {
-                    "data": 'subjectAreas.[].versions[].tags',
-                    "render": function (data, type, row, meta) {
-                      let a = '';
-                      data.forEach( function(valor, indice, array) {
-                        if (Array.isArray(valor)){
-                          valor.forEach( function(valorX, indiceX, arrayX){    
-                           a += ('<p style="margin: 10px 1px 10px;">'+valorX+'</p></br>');
-                          });
-                        }else{
-                          a += ('<p style="margin: 10px 1px 10px;">'+valor+'</p></br>');
                         }
                       });
                       return a;
