@@ -1,187 +1,286 @@
 ---
 layout: home
 title: CIM
-subject1 : Setup
-subject2 : Hire
-subject3 : Produce
-subject4 : Market
-subject5 : Sell
-subject6 : Service
-subject7 : Fulfill
-subject8 : Interact
-subject9 : Finance
-subject10 : Analyze
-
-setup1 : Software Host
-setup1_status: not
-setup2 : Software Tenant
-setup2_status: not
-setup3 : Software User
-setup3_status: not
-setup4 : Software App.
-setup4_status: not
-setup5 : Software Test
-setup5_status: not
-setup6 : Software Service
-setup6_status: not
-setup7 : Soft. Batch Job
-setup7_status: not
-setup8 : IoT Device
-setup8_status: not
-setup9 : Data Model
-setup9_status: progres
-
-
-Hire1 : Job Application
-Hire1_status: not
-Hire2 : Employee
-Hire2_status: progres
-Hire3 : Compensation
-Hire3_status: not
-Hire4 : Training
-Hire4_status: not
-Hire5 : Location
-Hire5_status: not
-Hire6 : Work Territory
-Hire6_status: not
-Hire7 : Work Report
-Hire7_status: not
-Hire8 : Biz Process
-Hire8_status: not
-Hire9 : Biz Continuity
-Hire9_status: not
-
-
-Produce1 : Supplier
-Produce1_status: not
-Produce2 : Product
-Produce2_status: enable
-Produce3 : Inventory Received
-Produce3_status: not
-Produce4 : Inventory Product
-Produce4_status: not
-Produce5 : Inventory Transfer
-Produce5_status: not
-Produce6 : Electronic Media
-Produce6_status: not
-Produce7 : Purchase Order
-Produce7_status: not
-Produce8 : Sales Agreement
-Produce8_status: not
-
-Market1 : Party
-Market1_status: enable
-Market2 : Party Resolution
-Market2_status: not
-Market3 : Privacy Consent
-Market3_status: progres
-Market4 : Market Audience
-Market4_status: progres
-Market5 : Campaign
-Market5_status: progres
-Market6 : Promotion
-Market6_status: progres
-Market7 : Trade Event
-Market7_status: not
-Market8 : Ad Buy
-Market8_status: not
-Market9 : Web Site
-Market9_status: not
-
-Sell1 : Price Book
-Sell1_status: progres
-Sell2 : Shopping Cart
-Sell2_status: progres
-Sell3 : Quote
-Sell3_status: progres
-Sell4 : Contract
-Sell4_status: progres
-Sell5 : Opportunity
-Sell5_status: progres
-Sell6 : Opportunity Forecast
-Sell6_status: not
-Sell7 : Sales Order
-Sell7_status: progres
-Sell8 : Loyalty Program
-Sell8_status: progres
-Sell9 : Loyalty Program
-Sell9_status: not
-
-Service1 : AI Assistant
-Service1_status: not
-Service2 : Asset
-Service2_status: progres
-Service3 : Asset Subscription
-Service3_status: not
-Service4 : Web Content
-Service4_status: not
-Service5 : Case
-Service5_status: progres
-Service6 : Task
-Service6_status: progres
-Service7 : Event
-Service7_status: progres
-
-Fulfill1 : Fulfillment Order
-Fulfill1_status: not
-Fulfill2 : Shipment
-Fulfill2_status: enable
-Fulfill3 : Return Order
-Fulfill3_status: not
-Fulfill4 : Work Order
-Fulfill4_status: not
-Fulfill5 : Work Resource
-Fulfill5_status: not
-Fulfill6 : Work Forecast
-Fulfill6_status: not
-
-Interact1 : Engagement
-Interact1_status: progres
-Interact2 : Conversation
-Interact2_status: not
-Interact3 : Appointment
-Interact3_status: not
-Interact4 : Software Event
-Interact4_status: not
-Interact5 : Data Connector
-Interact5_status: not
-Interact6 : Data Movement
-Interact6_status: not
-Interact7 : Loyalty Journey
-Interact7_status: progres
-
-Finance1 : Budget
-Finance1_status: not
-Finance2 : Invoice
-Finance2_status: not
-Finance3 : Payment Method
-Finance3_status: enable
-Finance4 : Payment
-Finance4_status: enable
-Finance5 : Credit Memo
-Finance5_status: not
-Finance6 : Financial Ledger
-Finance6_status: not
-Finance7 : Account Forecast
-Finance7_status: not
-Finance8 : Calendar
-Finance8_status: not
-Finance9 : Tax Policy
-Finance9_status: not
-
-Analyze1 : AI Model
-Analyze1_status: not
-Analyze2 : AI Application
-Analyze2_status: not
-Analyze3 : IoT Device Use
-Analyze3_status: not
-Analyze4 : Data Lineage
-Analyze4_status: progres
-Analyze5 : Blockchain
-Analyze5_status: not
-Analyze6 : Survey
-Analyze6_status: progres
-Analyze7 : Loyalty Journal
-Analyze7_status: progres
+subjects :
+  -
+    title: Setup
+    image: "./img/icon/setup.png"
+    items:
+      -
+        title: Software Host
+        status: not
+      -
+        title: Software Tenant
+        status: not
+      -
+        title: Software User
+        status: not
+      -
+        title: Software App.
+        status: not
+      -
+        title: Software Test
+        status: not
+      -
+        title: Software Service
+        status: not
+      -
+        title: Soft. Batch Job
+        status: not
+      -
+        title: IoT Device
+        status: not
+      -
+        title: Data Model
+        status: progres
+  - 
+    title: Hire
+    image: "./img/icon/hire.png"
+    items:
+      - 
+        title: Job Application
+        status: not
+      - 
+        title: Employee
+        status: progres
+      - 
+        title: Compensation
+        status: not
+      - 
+        title: Training
+        status: not
+      - 
+        title: Location
+        status: not
+      - 
+        title: Work Territory
+        status: not
+      - 
+        title: Work Report
+        status: not
+      - 
+        title: Biz Process
+        status: not
+      - 
+        title: Biz Continuity
+        status: not
+  - 
+    title: Produce
+    image: "./img/icon/produce.png"
+    items:
+      - 
+        title: Supplier
+        status: not
+      - 
+        title: Product
+        status: enable
+      - 
+        title: Inventory Received
+        status: not
+      - 
+        title: Inventory Product
+        status: not
+      - 
+        title: Inventory Transfer
+        status: not
+      - 
+        title: Electronic Media
+        status: not
+      - 
+        title: Purchase Order
+        status: not
+      - 
+        title: Sales Agreement
+        status: not
+  - 
+    title: Market
+    image: "./img/icon/market.png"
+    items:
+      - 
+        title: Party
+        status: enable
+      - 
+        title: Party Resolution
+        status: not
+      - 
+        title: Privacy Consent
+        status: progres
+      - 
+        title: Market Audience
+        status: progres
+      - 
+        title: Campaign
+        status: progres
+      - 
+        title: Promotion
+        status: progres
+      - 
+        title: Trade Event
+        status: not
+      - 
+        title: Ad Buy
+        status: not
+      - 
+        title: Web Site
+        status: not
+  - 
+    title: Sell
+    image: "./img/icon/sell.png"
+    items:
+      - 
+        title: Price Book
+        status: progres
+      - 
+        title: Shopping Cart
+        status: progres
+      - 
+        title: Quote
+        status: progres
+      - 
+        title: Contract
+        status: progres
+      - 
+        title: Opportunity
+        status: progres
+      - 
+        title: Opportunity Forecast
+        status: not
+      - 
+        title: Sales Order
+        status: progres
+      - 
+        title: Loyalty Program
+        status: progres
+      - 
+        title: Loyalty Program
+        status: not
+  - 
+    title: Service
+    image: "./img/icon/service.png"
+    items:
+      - 
+        title: AI Assistant
+        status: not
+      - 
+        title: Asset
+        status: progres
+      - 
+        title: Asset Subscription
+        status: not
+      - 
+        title: Web Content
+        status: not
+      - 
+        title: Case
+        status: progres
+      - 
+        title: Task
+        status: progres
+      - 
+        title: Event
+        status: progres
+  - 
+    title: Fulfill
+    image: "./img/icon/fulfill.png"
+    items:
+      - 
+        title: Fulfillment Order
+        status: not
+      - 
+        title: Shipment
+        status: enable
+      - 
+        title: Return Order
+        status: not
+      - 
+        title: Work Order
+        status: not
+      - 
+        title: Work Resource
+        status: not
+      - 
+        title: Work Forecast
+        status: not
+  - 
+    title: Interact
+    image: "./img/icon/interact.png"
+    items:
+      - 
+        title: Engagement
+        status: progres
+      - 
+        title: Conversation
+        status: not
+      - 
+        title: Appointment
+        status: not
+      - 
+        title: Software Event
+        status: not
+      - 
+        title: Data Connector
+        status: not
+      - 
+        title: Data Movement
+        status: not
+      - 
+        title: Loyalty Journey
+        status: progres
+  - 
+    title: Finance
+    image: "./img/icon/finance.org.png"
+    items:
+      - 
+        title: Budget
+        status: not
+      - 
+        title: Invoice
+        status: not
+      - 
+        title: Payment Method
+        status: enable
+      - 
+        title: Payment
+        status: enable
+      - 
+        title: Credit Memo
+        status: not
+      - 
+        title: Financial Ledger
+        status: not
+      - 
+        title: Account Forecast
+        status: not
+      - 
+        title: Calendar
+        status: not
+      - 
+        title: Tax Policy
+        status: not
+  - 
+    title: Analyze
+    image: "./img/icon/analyze.png"
+    items:
+      - 
+        title: AI Model
+        status: not
+      - 
+        title: AI Application
+        status: not
+      - 
+        title: IoT Device Use
+        status: not
+      - 
+        title: Data Lineage
+        status: progres
+      - 
+        title: Blockchain
+        status: not
+      - 
+        title: Survey
+        status: progres
+      - 
+        title: Loyalty Journal
+        status: progres
 
 ---
