@@ -129,157 +129,106 @@ title: CIM
   
   </body>
     <script>
-
+$(document).ready(function() {
+  var dt = $('#tablaUsuarios').dataTable();
+  dt.fnDestroy();
+});
   $(document).ready(function() {
     const url = 'https://raw.githubusercontent.com/standards-hub/cim_github_pages/dev/playground/cim_subject_areas_library.json';
     var table = $('#tablaUsuarios').DataTable({
       ajax:{
             url:url,
-            dataSrc: 'domains'
+            dataSrc: function ( json ) {
+                let j = json;
+                let jf = [];
+                for (let i=0, ien=json.domains.length; i<ien; i++ ) {
+                  for(let j=0, jen=json.domains[i].subjectAreas.length; j<jen; j++){
+                    for(let k=0, ken=json.domains[i].subjectAreas[j].versions.length; k<ken; k++){
+                      let name = json.domains[i].name;
+                      let subjectAreas = json.domains[i].subjectAreas[j].name;
+                      let version = json.domains[i].subjectAreas[j].versions[k].version;
+                      let versionDate = json.domains[i].subjectAreas[j].versions[k].versionDate;
+                      let diagramURL = json.domains[i].subjectAreas[j].versions[k].diagramURL;
+                      let descriptionURL = json.domains[i].subjectAreas[j].versions[k].descriptionURL;
+                      let gitHubURL = json.domains[i].subjectAreas[j].versions[k].gitHubURL;
+                      jf.push({
+                        name:name,
+                        subjectAreas: subjectAreas,
+                        version:  version,
+                        versionDate:  (versionDate.year+'-'+versionDate.month+'-'+versionDate.day),
+                        diagramURL:  diagramURL,
+                        descriptionURL:  descriptionURL,
+                        gitHubURL:  gitHubURL
+                      });
+                    }
+                  }
+                }
+                return jf;
+              }
           },
-              "columns":[
-                  {"data": "name"},
+          columns:[
                   {
-                    "width": "20%",
-                    "data": 'subjectAreas.[].name',
+                    "data": "name",
                     "render": function (data, type, row, meta) {
-                      let a = '';
-                      data.forEach( function(valor, indice, array) {
-                        a += ('<p style="margin-top:20px">'+valor+'</p></br>');
-                      });
-                      return a;
+                      return data;
                     }
                   },
                   {
-                    "width": "10px",
-                    "data": 'subjectAreas.[].versions[].version',
+                    "data": "subjectAreas",
                     "render": function (data, type, row, meta) {
-                      let a = '';
-                      data.forEach( function(valor, indice, array) {
-                        if (Array.isArray(valor)){
-                          valor.forEach( function(valorX, indiceX, arrayX){    
-                           a += ('<p style="margin-top:20px">'+valorX+'</p></br>');
-                          });
-                        }else{
-                          a += ('<p style="margin-top:20px">'+valor+'</p></br>');
-                        }
-                      });
-                      return a;
+                      return data;
                     }
                   },
                   {
-                    "width": "10%",
-                    "data": 'subjectAreas.[].versions[].versionDate',
+                    "data": "version",
                     "render": function (data, type, row, meta) {
-                      let fecha='';
-                      data.forEach( function(valor, indice, array) {
-                        if (Array.isArray(valor)){
-                          valor.forEach( function(valorX, indiceX, arrayX){    
-                            fecha+=('<p style="margin-top:20px">'+valorX['year']+'-'+valorX['month']+'-'+valorX['day']+'</p></br>');                          
-                          });
-                        }else{
-                          fecha+=('<p style="margin-top:20px">'+valor['year']+'</p></br>');
-                        }
-                      });
-                      return fecha;
+                      return data;
                     }
                   },
                   {
-                    "className": "text-center",
-                    "width": "10%",
-                    "data": 'subjectAreas.[].versions[].diagramURL',
+                    "data": "versionDate",
                     "render": function (data, type, row, meta) {
-                      let a = '';
-                      data.forEach( function(valor, indice, array) {
-                        if (Array.isArray(valor)){
-                          valor.forEach( function(valorX, indiceX, arrayX){    
-                            a += '<a href="'+valorX+'" target="_blank"><img src="./img/doc.png" "height="20" width="20"></a></br>';
-                          });
-                        }else{
-                          a += '<a href="'+valor+'" target="_blank"><img src="./img/doc.png" "height="20" width="20"></a></br>';
-                        }
-                      });
-                      return a;
+                      return data;
                     }
                   },
                   {
-                    //"className": "text-center",
-                    "width": "30%",
-                    "data": 'subjectAreas.[].versions[].descriptionURL',
-                    "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
-                      $(nTd).css('text-align', 'justify')
-                      $(nTd).css('font-size', '14px')
-                    },
+                    "data": "diagramURL",
                     "render": function (data, type, row, meta) {
-                      data.forEach( function(valor, indice, array) {
-                        if (Array.isArray(valor)){
-                          valor.forEach( function(valorX, indiceX, arrayX){
-                            try{
-                              let currentCell = $("#tablaUsuarios").DataTable().cells({"row":meta.row, "column":meta.col}).nodes(0);
-                              $.ajax({
-                                  url: valorX
-                              }).done(function (data) {
-                                let d = JSON.parse(data)
-                                let desc = d.description;
-                                if(x[meta.row]){
-                                  x[meta.row].push(desc+'</br>');
-                                }
-                                else{
-                                  x[meta.row]=[];
-                                }
-                                console.log(meta.row, x[0])
-                                x[meta.row] = x[meta.row].filter((v, i, a) => a.indexOf(v) === i);
-                                $(currentCell).text(x[meta.row].toString());
-                              });
-                            }catch{}                     
-                          });
-                        }else{
-                          try{
-                              let currentCell = $("#tablaUsuarios").DataTable().cells({"row":meta.row, "column":meta.col}).nodes(0);
-                              $.ajax({
-                                  url: valor
-                              }).done(function (data) {
-                                let d = JSON.parse(data)
-                                let desc = d.description;
-                                if(x[meta.row]){
-                                  x[meta.row].push(desc+'</br>');
-                                }
-                                else{
-                                  x[meta.row]=[];
-                                }
-                                x[meta.row] = x[meta.row].filter((v, i, a) => a.indexOf(v) === i);
-                                $(currentCell).text(x[meta.row].toString());
-                              });
-                            }catch{}
-                        }
-                      });
+                      return '<a href="'+data+'" target="_blank"><img src="https://www.flaticon.es/svg/vstatic/svg/548/548438.svg?token=exp=1619543316~hmac=ab42b0d7f47b49001130c9a604ef5fc3" "height="20" width="25"></a>';
+                    }
+                  },
+                  {
+                    "data": "descriptionURL",
+                    "render": function (data, type, row, meta) {
+                      try{
+                        let currentCell = $("#tablaUsuarios").DataTable().cells({"row":meta.row, "column":meta.col}).nodes(0);
+                        $.ajax({
+                            url: data
+                        }).done(function (data) {
+                          let d = JSON.parse(data)
+                          let desc = d.description;
+                          $(currentCell).text(desc);
+                        });
+                      }catch{} 
                       return null;
                     }
                   },
                   {
-                    "className": "text-center",
-                    "width": "10%",
-                    "data": 'subjectAreas.[].versions[].gitHubURL',
+                    "data": "gitHubURL",
                     "render": function (data, type, row, meta) {
-                      let a = '';
-                      data.forEach( function(valor, indice, array) {
-                        if (Array.isArray(valor)){
-                          valor.forEach( function(valorX, indiceX, arrayX){    
-                            a += '<a href="'+valorX+'" target="_blank"><img src="./img/github.png" "height="20" width="20"></a></br>';
-                          });
-                        }else{
-                          a += '<a href="'+valor+'" target="_blank"><img src="./img/github.png" "height="20" width="20"></a></br>';
-                        }
-                      });
-                      return a;
+                      return '<a href="'+data+'" target="_blank"><img src="https://image.flaticon.com/icons/png/512/25/25231.png" "height="20" width="25"></a>';
                     }
-                  }
-              ]  
-            });
+                  },
+              ],
+          order: [[0, 'asc'], [1, 'asc'], [2, 'asc'], [3, 'asc'], [4, 'asc'], [5, 'asc'], [6, 'asc']],
+          rowReorder: {
+            dataSrc: 'name',
+          },
+          'rowsGroup': [1]
+        });
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const search = urlParams.get('search')
-    console.log(search);
     if(search){
         table.search(search);
     }
