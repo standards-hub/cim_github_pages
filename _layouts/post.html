@@ -206,17 +206,7 @@ $(document).ready(function() {
                       $(nTd).css('font-size', '14px')
                     },
                     "render": function (data, type, row, meta) {
-                      try{
-                        let currentCell = $("#tablaUsuarios").DataTable().cells({"row":meta.row, "column":meta.col}).nodes(0);
-                        $.ajax({
-                            url: data
-                        }).done(function (data) {
-                          let d = JSON.parse(data)
-                          let desc = d.description;
-                          $(currentCell).text(desc);
-                        });
-                      }catch{} 
-                      return null;
+                      return data;
                     }
                   },
                   {
