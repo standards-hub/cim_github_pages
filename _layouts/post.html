@@ -170,6 +170,10 @@ $(document).ready(function() {
           columns:[
                   {
                     "data": "name",
+                      "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
+                      $(nTd).css('vertical-align', 'top')
+                      $(nTd).css('padding', '44px 10px')
+                    },
                     "render": function (data, type, row, meta) {
                       return data;
                     }
