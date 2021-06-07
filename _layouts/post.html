@@ -75,7 +75,7 @@ title: CIM
             <option value="Produce">Produce</option>
             <option value="Sell">Sell</option>
             <option value="Service">Service</option>
-        </select>
+          </select>
           </select>
         </div>
         <div class="form-group col-md-4 no-padding">
@@ -99,11 +99,10 @@ title: CIM
             <option value="1.0">1.0</option>
             <option value="1.1">1.1</option>
         </select>
-          </select>
         </div>
-        <div class="form-group col-md-4 no-padding" style="font-size: 15px;">
-          <a id="sel1" value="All">Latest  |</a>
-          <a id="sel1" value="All">All </a>
+        <div class="form-group col-md-4 no-padding" style="font-size: 15px;" id="sel1">
+          <button id="all">All</button>
+          <button id="last">Latest</button>
         </div>
       </div>
       <div style="width:1213px">
@@ -136,6 +135,7 @@ $(document).ready(function() {
   $(document).ready(function() {
     const url = 'https://raw.githubusercontent.com/standards-hub/cim_github_pages/dev/playground/cim_subject_areas_library.json';
     var table = $('#tablaUsuarios').DataTable({
+      
       ajax:{
             url:url,
             dataSrc: function ( json ) {
@@ -223,12 +223,19 @@ $(document).ready(function() {
           },
           'rowsGroup': [1]
         });
+
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const search = urlParams.get('search')
     if(search){
         table.search(search);
     }
+    $('#all').on('click', function () {
+    table.column(0).search('').draw();
+    });
+    $('#last').on('click', function () {
+    table.column(3).search('2021').draw();
+    });
 
     $('#sel1').change(function() {
         if (this.value === "All") {
