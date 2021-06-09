@@ -236,11 +236,14 @@ $(document).ready(function() {
     if(search){
         table.search(search);
     }
+
+
     $('#all').on('click', function () {
-    table.column(0).search('').draw();
+      table.search('').columns().search('').draw();
     });
+
     $('#last').on('click', function () {
-    table.column(3).search('2021').draw();
+    table.column(2).search('1.1').draw();
     });
 
     $('#sel1').change(function() {
