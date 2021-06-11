@@ -1,163 +1,309 @@
 ---
 layout: default
+title: CIM
 ---
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CIM</title>
-    <meta name="description" content="Open source is a driving force behind enterprise IT innovation, operational effectiveness and business value creation.">
-    <link rel="shortcut icon" type="image/png" href="./img/cim-color.png">
-    <link rel="canonical" href="https://standards-hub.github.io/standards-hub/">
-    <link rel="alternate" type="application/rss+xml" title="standards-hub" href="https://standards-hub.github.io/standards-hub/feed.xml">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <title>CIM</title>
+  <meta name="description"
+    content="Open source is a driving force behind enterprise IT innovation, operational effectiveness and business value creation.">
+  <link rel="canonical" href="https://standards-hub.github.io/standards-hub/">
+  <link rel="alternate" type="application/rss+xml" title="standards-hub"
+    href="https://standards-hub.github.io/standards-hub/feed.xml">
+  <link rel="shortcut icon"
+    href="https://www.flaticon.es/svg/vstatic/svg/2716/2716299.svg?token=exp=1614193035~hmac=9ba80360e322967855a59aea2b41c4ff" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="shortcut icon" href="./img/web.svg" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+  <script src="//cdn.rawgit.com/ashl1/datatables-rowsgroup/v1.0.0/dataTables.rowsGroup.js"></script>
+  <link rel="stylesheet" href="./css/jquery.dataTables.min.css">
+  </link>
+
 </head>
-<style>
-  .button1 {background-color: #e7e7e7; color: black; border-color: #efefef;}
-  .button2 {background-color: #DAE8FC; border: 4px solid #00285f; color: rgb(120, 9, 148); }
-  .button3 {background-color: #DAE8FC; border: 4px solid #00285f; color: rgb(120, 9, 148);border-style: dotted;}
-  .button4 {border-radius: 12px; }
-  .button {
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 10px;
-    margin: 4px 2px;
-    cursor: pointer;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: 110px;
-}
-.imagen{
-    max-width: 50%;
-    align-content: baseline;
-    margin-top: 12.5px;
-    margin-bottom: 2px;
-    margin-left: 37px;
-    margin-right: auto;
- }
-table {
-   width: 100%;
-   border: 1px solid #000;
-}
-th, td {
-   width: 25%;
-   text-align: left;
-   vertical-align: top;
-   border: 1px solid #ffffff00;
-}
-.td{
-  border: 1px solid #e8e8e800;
-  padding: 3px 1px;
-}
-h5{
-  color: rgb(120, 9, 148)
-}
- 
-</style>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
   ga('create', 'UA-76165511-1', 'auto');
   ga('send', 'pageview');
-
+  let x = [];
 </script>
 
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background: rgb(255 255 255);border: 1px solid #d0c6c6;">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation"
+  style="background: rgb(255 255 255);border: 1px solid #d0c6c6;">
   <div class="container">
-      <div class="navbar-header">
-          <button class="navbar-toggle collapsed" aria-expanded="false" aria-controls="navbar" type="button" data-toggle="collapse" data-target="#navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="https://standards-hub.github.io/cim_github_pages/">
-            <img src="./img/cim-text-hztl-color.png" style="max-width: 345px;margin-top: 5px;">
-        </a>
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" aria-expanded="false" aria-controls="navbar" type="button"
+        data-toggle="collapse" data-target="#navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/cim_github_pages">
+        <img src="./img/cim-text-hztl-color.png" style="max-width: 345px;margin-top: 5px;">
       </a>
-      </div>
-      <div class="navbar-collapse collapse" id="navbar">
-        <ul class="nav navbar-nav">                  
-                <li><a class="page-link" href="https://cloudinformationmodel.org" target="_blank" style="color: #000">Website</a></li>
-                <li><a class="page-link" href="https://standards-hub.github.io/cim_github_pages/table" style="color: #000">Subject Areas</a></li>
-                <li><a class="page-link" target="_blank" href="https://github.com/cloudinformationmodel"><i class="fab fa-github-alt" style="color: #000"></i></a></li>
-            
-        </ul>
+      </a>
     </div>
-      <!--/.nav-collapse -->
+    <div class="navbar-collapse collapse" id="navbar">
+      <ul class="nav navbar-nav">
+        <li><a class="page-link" href="https://cloudinformationmodel.org" target="_blank"
+            style="color: #000">Website</a></li>
+        <li><a class="page-link" href="https://standards-hub.github.io/cim_github_pages/table"
+            style="color: #000">Subject Areas</a></li>
+        <li><a class="page-link" target="_blank" href="https://github.com/cloudinformationmodel"><i
+              class="fab fa-github-alt" style="color: #000"></i></a></li>
+      </ul>
+    </div>
   </div>
-  <!--/.container-fluid -->
 </nav>
 
+<body onload="myFunction()" style="background: #ededed;">
   <div class="page-content">
     <div class="wrapper">
-        
-  </div>
-</div>
 
-
-<div class="home">
-<div class="tier" style="padding: 50px 1px;">
-  <div class="container" style="margin-top: 90px;">
-    <table style="table-layout: fixed;width: 1200px;">
-
-      <tr style="border: 1px solid #ffffff00;">
-				{% assign maxItems = 0 %}
-        {% for subject in page.subjects %}
-        <td class="td"><img style="font-size: 50px; margin-left: 25px;" src={{ subject.image }} class="imagen"/></td>
-          {% if subject.items.size > maxItems %}
-            {% assign maxItems = subject.items.size %}
-          {% endif %}
-        {% endfor %}
-      </tr>
-      <tr style="background-color: #ffffff">
-        {% assign maxItems = 0 %}
-        {% for subject in page.subjects %}
-        <td class="td"><h5 style="text-align: center;">{{ subject.title }}</h5></td>
-          {% if subject.items.size > maxItems %}
-            {% assign maxItems = subject.items.size %}
-          {% endif %}
-        {% endfor %}
-      </tr>
-      {% assign maxItems = maxItems | minus: 1 %}
-      {% for index in (0..maxItems) %}
-      <tr style="background: white; ">
-    
-        {% for subject in page.subjects %}
-        <td class="td"> 
-          {% if {{subject.items[index].status}} == 'enable'  %}
-         <a href="https://standards-hub.github.io/cim_github_pages/table?search={{subject.items[index].title}}">
-          <button class="button button4 button2" >{{subject.items[index].title}}</button></a>
-          {% endif %}
-          {% if {{subject.items[index].status}} == 'progres'  %}
-          <button class="button button4 button3" >{{subject.items[index].title}}</button>
-          {% endif %}
-          {% if {{subject.items[index].status}} == 'not'  %}
-          <button class="button button4" >{{subject.items[index].title}}</button>
-          {% endif %}
-        </td>
-        {% endfor %}
-      </tr>
-      {% endfor %}
-    </table>
-  </div>
-              
-</div>
     </div>
   </div>
 
-  <!-- contains jquery and bootstrap -->
-  <script src="/standards-hub/js/vendor.js"></script>
-  <!-- functions -->
-  <script src="/standards-hub/js/functions.js"></script>
+  <div class="home">
+    <div class="tier">
+      <div class="container">
+        <div class="container"
+          style="margin-bottom: 85px;background: linear-gradient(90deg,#65b2e8 0%,#534588 100%);box-shadow: 0px 10px 10px -6px black;margin-top: 60px;">
+          <div class="form-group col-md-4 no-padding">
+            <select class="form-control" id="sel1">
+              <option value="Filter by">Domains</option>
+              <option value="All">All</option>
+              <option value="Finance">Finance</option>
+              <option value="Fulfill">Fulfill</option>
+              <option value="Produce">Produce</option>
+              <option value="Sell">Sell</option>
+              <option value="Service">Service</option>
+            </select>
+            </select>
+          </div>
+          <div class="form-group col-md-4 no-padding">
+            <select class="form-control" id="sel3">
+              <option value="Filter by">Subject Areas</option>
+              <option value="All">All</option>
+              <option value="Shipment">Shipment</option>
+              <option value="Sales Order">Sales Order</option>
+              <option value="Product">Product</option>
+              <option value="Payment Method">Payment Method</option>
+              <option value="Payment">Payment</option>
+              <option value="Party">Party</option>
+              <option value="Case">Case</option>
+            </select>
+            </select>
+          </div>
+          <div class="form-group col-md-4 no-padding">
+            <select class="form-control" id="sel2">
+              <option value="Filter by">Version</option>
+              <option value="All">All</option>
+              <option value="1.0">1.0</option>
+              <option value="1.1">1.1</option>
+            </select>
+          </div>
+          <div class="form-group col-md-4 no-padding" style="font-size: 15px;" id="sel1">
+            <button id="all" style="background: #554f91;color: white;">All</button>
+            <button id="last" style="background: #554f91;color: white;">Latest</button>
+          </div>
+        </div>
+        <div style="width:1213px">
+          <table id="tablaUsuarios" class="table-striped table-bordered; box-shadow: 0px 10px 10px -6px black;">
+            <thead>
+              <tr style="background-color: #65b2e8;color: #FFFF;">
+                <th scope="col">Domain</th>
+                <th scope="col">Subject Areas</th>
+                <th scope="col">Version</th>
+                <th scope="col">Published</th>
+                <th scope="col">Docs</th>
+                <th scope="col">Description</th>
+                <th scope="col">GitHub</th>
+              </tr>
+            </thead>
+            <tbody id="con">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 
+</body>
+<script>
+  $(document).ready(function () {
+    var dt = $('#tablaUsuarios').dataTable(
+
+    );
+    dt.fnDestroy();
+  });
+  $(document).ready(function () {
+    const url = 'https://raw.githubusercontent.com/standards-hub/cim_github_pages/gh-pages/cim_subject_areas_library.json';
+    var table = $('#tablaUsuarios').DataTable({
+
+      ajax: {
+        url: url,
+        dataSrc: function (json) {
+          let j = json;
+          let jf = [];
+          for (let i = 0, ien = json.domains.length; i < ien; i++) {
+            for (let j = 0, jen = json.domains[i].subjectAreas.length; j < jen; j++) {
+              for (let k = 0, ken = json.domains[i].subjectAreas[j].versions.length; k < ken; k++) {
+                let name = json.domains[i].name;
+                let subjectAreas = json.domains[i].subjectAreas[j].name;
+                let version = json.domains[i].subjectAreas[j].versions[k].version;
+                let versionDate = json.domains[i].subjectAreas[j].versions[k].versionDate;
+                let diagramURL = json.domains[i].subjectAreas[j].versions[k].diagramURL;
+                let descriptionURL = json.domains[i].subjectAreas[j].versions[k].descriptionURL;
+                let gitHubURL = json.domains[i].subjectAreas[j].versions[k].gitHubURL;
+                jf.push({
+                  name: name,
+                  subjectAreas: subjectAreas,
+                  version: version,
+                  versionDate: (versionDate.year + '-' + versionDate.month + '-' + versionDate.day),
+                  diagramURL: diagramURL,
+                  descriptionURL: descriptionURL,
+                  gitHubURL: gitHubURL
+                });
+              }
+            }
+          }
+          return jf;
+        }
+      },
+      columns: [
+        {
+          "data": "name",
+          "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
+            $(nTd).css('vertical-align', 'top')
+            $(nTd).css('padding', '44px 10px')
+          },
+          "render": function (data, type, row, meta) {
+            return data;
+          }
+        },
+        {
+          "data": "subjectAreas",
+          "render": function (data, type, row, meta) {
+            return data;
+          }
+        },
+        {
+          "className": "text-center",
+          "data": "version",
+          "render": function (data, type, row, meta) {
+            return data;
+          }
+        },
+        {
+          "className": "text-center",
+          "data": "versionDate",
+          "render": function (data, type, row, meta) {
+            return data;
+          }
+        },
+        {
+          "className": "text-center",
+          "data": "diagramURL",
+          "render": function (data, type, row, meta) {
+            return '<a href="' + data + '" target="_blank"><img src="./img/doc.png" "height="20" width="20"></a>';
+          }
+        },
+        {
+          "data": "descriptionURL",
+          "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
+            $(nTd).css('font-size', '14px')
+          },
+          "render": function (data, type, row, meta) {
+            return data;
+          }
+        },
+        {
+          "className": "text-center",
+          "data": "gitHubURL",
+          "render": function (data, type, row, meta) {
+            return '<a href="' + data + '" target="_blank"><img src="./img/github.png" "height="20" width="20"></a>';
+          }
+        },
+      ],
+      order: [[0, 'asc'], [1, 'asc'], [2, 'asc'], [3, 'asc']],
+      rowsGroup: [0],
+      rowReorder: {
+        dataSrc: 'name',
+      },
+      'rowsGroup': [0],
+      "columnDefs": [
+        { "orderable": false, "targets": [4, 5, 6] },
+      ]
+    });
+
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const search = urlParams.get('search')
+    if (search) {
+      table.search(search);
+    }
+
+
+    $('#all').on('click', function () {
+      table.search('').columns().search('').draw();
+    });
+
+    $('#last').on('click', function () {
+      table.column(2).search('1.1').draw();
+    });
+
+    $('#sel1').change(function () {
+      if (this.value === "All") {
+        table
+          .columns(0)
+          .search('')
+          .draw();
+      } else {
+        table
+          .columns(0)
+          .search(this.value)
+          .draw();
+      }
+    });
+    $('#sel2').change(function () {
+      if (this.value === "All") {
+        table
+          .columns(0)
+          .search('')
+          .draw();
+      } else {
+        table
+          .search(this.value)
+          .draw();
+      }
+    });
+    $('#sel3').change(function () {
+      if (this.value === "All") {
+        table
+          .columns(1)
+          .search('')
+          .draw();
+      } else {
+        table
+          .columns(1)
+          .search(this.value)
+          .draw();
+      }
+    });
+  });
+
+</script>
