@@ -8,27 +8,22 @@ title: CIM
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CIM</title>
-  <meta name="description"
-    content="Open source is a driving force behind enterprise IT innovation, operational effectiveness and business value creation.">
+  <meta name="description">
   <link rel="canonical" href="https://standards-hub.github.io/standards-hub/">
   <link rel="alternate" type="application/rss+xml" title="standards-hub"
     href="https://standards-hub.github.io/standards-hub/feed.xml">
-  <link rel="shortcut icon"
-    href="https://www.flaticon.es/svg/vstatic/svg/2716/2716299.svg?token=exp=1614193035~hmac=9ba80360e322967855a59aea2b41c4ff" />
-  <link rel="stylesheet" href="./css/bootstrap.min.css">
-  <link rel="stylesheet" href="./css/bootstrap-theme.min.css">
-  <link rel="stylesheet" href="./css/styles.css">
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-  <link rel="shortcut icon" href="./img/web.svg" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-  <script src="//cdn.rawgit.com/ashl1/datatables-rowsgroup/v1.0.0/dataTables.rowsGroup.js"></script>
   <link rel="stylesheet" href="./css/jquery.dataTables.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/sp-1.3.0/sl-1.3.3/datatables.min.css"/>
   <script type="text/javascript" src="https://cdn.datatables.net/v/dt/sp-1.3.0/sl-1.3.3/datatables.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
 </head>
+
 <script>
   (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
@@ -41,7 +36,35 @@ title: CIM
   ga('send', 'pageview');
   let x = [];
 </script>
+<style>
+.collapsible {
+  background-color: #65b2e8;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
 
+.active, .collapsible:hover {
+  background-color: #202020;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+</style>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation"
   style="background: rgb(255 255 255);border: 1px solid #d0c6c6;">
   <div class="container">
@@ -74,54 +97,15 @@ title: CIM
 <body onload="myFunction()" style="background: #ededed;">
   <div class="page-content">
     <div class="wrapper">
-
     </div>
   </div>
 
   <div class="home">
     <div class="tier">
       <div class="container">
-        <div class="container"
-          style="margin-bottom: 85px;background: linear-gradient(90deg,#65b2e8 0%,#534588 100%);box-shadow: 0px 10px 10px -6px black;margin-top: 60px;">
-          <div class="form-group col-md-4 no-padding">
-            <select class="form-control" id="sel1">
-              <option value="Filter by">Domains</option>
-              <option value="All">All</option>
-              <option value="Finance">Finance</option>
-              <option value="Fulfill">Fulfill</option>
-              <option value="Produce">Produce</option>
-              <option value="Sell">Sell</option>
-              <option value="Service">Service</option>
-            </select>
-            </select>
-          </div>
-          <div class="form-group col-md-4 no-padding">
-            <select class="form-control" id="sel3">
-              <option value="Filter by">Subject Areas</option>
-              <option value="All">All</option>
-              <option value="Shipment">Shipment</option>
-              <option value="Sales Order">Sales Order</option>
-              <option value="Product">Product</option>
-              <option value="Payment Method">Payment Method</option>
-              <option value="Payment">Payment</option>
-              <option value="Party">Party</option>
-              <option value="Case">Case</option>
-            </select>
-            </select>
-          </div>
-          <div class="form-group col-md-4 no-padding">
-            <select class="form-control" id="sel2">
-              <option value="Filter by">Version</option>
-              <option value="All">All</option>
-              <option value="1.0">1.0</option>
-              <option value="1.1">1.1</option>
-            </select>
-          </div>
-          <div class="form-group col-md-4 no-padding" style="font-size: 15px;" id="sel1">
-            <button id="all" style="background: #554f91;color: white;">All</button>
-            <button id="last" style="background: #554f91;color: white;">Latest</button>
-          </div>
-        </div>
+        
+        <button id="toggle" type="button" class="collapsible">SEARCH GLOBAL</button>
+
         <div style="width:1213px">
           <table id="tablaUsuarios" class="table-striped table-bordered; box-shadow: 0px 10px 10px -6px black;">
             <thead>
@@ -142,12 +126,11 @@ title: CIM
       </div>
     </div>
   </div>
-
+  
 </body>
 <script>
   $(document).ready(function () {
     var dt = $('#tablaUsuarios').dataTable(
-
     );
     dt.fnDestroy();
   });
@@ -245,19 +228,20 @@ title: CIM
       rowReorder: {
         dataSrc: ['name']
       },
-
+      
       columnDefs: [
         { "orderable": false, "targets": [4, 5, 6] },
-      ]
-    });
+      ],
+      searchPanes: {
+            cascadePanes: true,
+        },
+        dom: 'Pfrtip'
+      });
+      table.searchPanes.container().hide();
 
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const search = urlParams.get('search')
-    if (search) {
-      table.search(search);
-    }
-
+    $('#toggle').on( 'click', function () {
+      table.searchPanes.container().toggle();   
+    } );
 
     $('#all').on('click', function () {
       table.search('').columns().search('').draw();
