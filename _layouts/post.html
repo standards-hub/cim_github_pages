@@ -240,7 +240,13 @@ title: CIM
         dom: 'Pfrtip'
       });
       table.searchPanes.container().hide();
-
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const search = urlParams.get('search')
+    console.log(search);
+    if(search){
+        table.search(search);
+    }
     $('#toggle').on( 'click', function () {
       table.searchPanes.container().toggle();   
     } );
