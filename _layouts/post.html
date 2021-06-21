@@ -251,7 +251,18 @@ title: CIM
         table.search(search);
     }
     $('#toggle').on( 'click', function () {
-      table.searchPanes.container().toggle();   
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+      for (i = 0; i < coll.length; i++) {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight){
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          } 
+      } 
+      table.searchPanes.container().toggle();
     } );
 
     $('#all').on('click', function () {
